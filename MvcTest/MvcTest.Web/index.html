@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Marionette People Manager</title>
+
+    <!-- Bootstrap -->
+    <link href="Assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Style.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="app-container">
+        <div id="main-region" class="container">
+        </div>
+    </div>
+
+    <script type="text/template" id="person-template">
+        <td><a href="#people/edit/<%- id %>"> <%- fullName %> </a></td>
+        <td><%= yesNo(isPalindrome)%></td>
+        <td><%= yesNo(isAuthorised)%></td>
+        <td><%= yesNo(isEnabled)%></td>
+        <td><%= yesNo(coloursString)%></td>
+    </script>
+
+    <script type="text/template" id="colour-template">
+        <input type="checkbox"><%- isChecked === true? 'checked': ''%>> <%-name%>
+    </script>
+
+    <script type="text/template" id="people-list">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Palindrome</th>
+                <th>Authorised</th>
+                <th>Enabled</th>
+                <th>Colours</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </script>
+
+    <script type="text/template" id="missing-person-view">
+        <div class="alert alert-error">This person doesn't exist</div>
+    </script>
+
+    <script type="text/template" id="person-form">
+        <h1>Update <%-fullName%></h1>
+        <fieldset>
+            <legend>User details</legend>
+            <div class="form-group form-inline">
+                <input type="checkbox" id="isAuthorised" name="isAuthorised"><%-isAuthorised === true? 'checked':''%>/>
+                <label id="isAuthorisedLabel">Authorised</label>
+            </div>
+            <div class="form-group form-inline">
+                <input type="checkbox" id="isEnabled" name="isEnabled"><%-isEnabled === true? 'checked':''%>/>
+                <label id="isEnabledLabel">Enabled</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Favourite Colours</legend>
+            <div id="coloursListRegion"></div>
+        </fieldset>
+        <br />
+        <button class="btn btn-default js-submit">Save Changes</button>
+        <button class="btn btn-default js-cancel">Cancel</button>
+    </script>
+
+<script type="text/template" id="list-layout">
+    <h1>People</h1>
+    <div id="peopleListRegion"></div>
+</script>
+
+    <script src="Assets/js/vendor/jquery-2.2.0.js"></script>
+    <script src="Assets/js/vendor/json2.js"></script>
+    <script src="Assets/js/vendor/underscore.js"></script>
+    <script src="Assets/js/vendor/underscore.js"></script>
+    <script src="Assets/js/vendor/backbone.js"></script>
+    <script src="Assets/js/vendor/backbone.marionette.js"></script>
+    <script src="Assets/js/vendor/backbone.syphon.js"></script>
+
+    <script type="text/javascript">
+        PeopleManager.start();
+    </script>
+</body>
+</html>

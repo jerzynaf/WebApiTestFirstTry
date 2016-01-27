@@ -28,7 +28,7 @@
         <td><%= yesNo(isPalindrome)%></td>
         <td><%= yesNo(isAuthorised)%></td>
         <td><%= yesNo(isEnabled)%></td>
-        <td><%= yesNo(coloursString)%></td>
+        <td><%= coloursString%></td>
     </script>
 
     <script type="text/template" id="colour-template">
@@ -85,8 +85,13 @@
     <script src="Assets/js/vendor/underscore.js"></script>
     <script src="Assets/js/vendor/backbone.js"></script>
     <script src="Assets/js/vendor/backbone.marionette.js"></script>
-    <script src="Assets/js/vendor/backbone.syphon.js"></script>
-
+<script src="Assets/js/vendor/backbone.syphon.js"></script>
+    <script src="Assets/js/apps/people/list/replaceBoolean.js"></script>
+    <script src="Assets/js/app.js"></script>
+    <script src="Assets/js/entities/person.js"></script>
+    <script src="Assets/js/apps/people/people_app.js"></script>
+    <script src="Assets/js/apps/people/list/list_view.js"></script>
+    <script src="Assets/js/apps/people/list/list_controller.js"></script>
     <script type="text/javascript">
         PeopleManager.start();
     </script>

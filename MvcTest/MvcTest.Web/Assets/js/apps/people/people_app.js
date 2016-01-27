@@ -10,7 +10,7 @@
 
   var API = {
     listPeople: function () {
-      //execute controller's action to list people
+      PeopleApp.List.Controller.listPeople();
     },
     editPerson: function (id) {
       //execute controller's action to edit person

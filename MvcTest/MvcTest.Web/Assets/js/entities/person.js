@@ -55,11 +55,11 @@
   };
 
   PeopleManager.reqres.setHandler("person:entities", function(){
-     return API.getContactEntities();
+     return API.getPeopleEntities();
   });
 
   PeopleManager.reqres.setHandler("person:entity", function (personId) {
-    return API.getContactEntity(personId);
+    return API.getPersonEntity(personId);
   });
 
   PeopleManager.reqres.setHandler("colour:entities", function (rawColours) {

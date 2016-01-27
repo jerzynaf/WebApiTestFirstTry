@@ -136,6 +136,7 @@
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="Assets\js\app.js" />
+    <Content Include="Assets\js\apps\people\list\list_controller.js" />
     <Content Include="Assets\js\apps\people\list\list_view.js" />
     <Content Include="Assets\js\apps\people\list\replaceBoolean.js" />
     <Content Include="Assets\js\apps\people\people_app.js" />
@@ -159,7 +160,7 @@
     <Content Include="Assets\css\bootstrap.css.map" />
     <Content Include="Assets\css\bootstrap.min.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="index.html" />
+    <Content Include="index2.html" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

@@ -1,4 +1,4 @@
-﻿MyApp.module("PeopleApp", function (PeopleApp, PeopleManager, Backbone, Marionette, $, _) {
+﻿PeopleManager.module("PeopleApp", function (PeopleApp, PeopleManager, Backbone, Marionette, $, _) {
 
   PeopleApp.Router = Marionette.AppRouter.extend({
     appRoutes: {

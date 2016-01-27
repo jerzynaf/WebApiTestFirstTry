@@ -1,4 +1,4 @@
-﻿MyApp.module("Entities", function (Entities, PeopleManager, Backbone, Marionette, $, _) {
+﻿PeopleManager.module("Entities", function (Entities, PeopleManager, Backbone, Marionette, $, _) {
   Entities.Person = Backbone.Model.extend({
     urlRoot: "api/PeopleApi",
     defaults: {

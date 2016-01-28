@@ -136,6 +136,7 @@
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="Assets\js\app.js" />
+    <Content Include="Assets\js\apps\people\edit\edit_view.js" />
     <Content Include="Assets\js\apps\people\list\list_controller.js" />
     <Content Include="Assets\js\apps\people\list\list_view.js" />
     <Content Include="Assets\js\apps\people\list\replaceBoolean.js" />
@@ -208,7 +209,6 @@
     <Folder Include="Areas\API\Models\" />
     <Folder Include="Areas\API\Views\Shared\" />
     <Folder Include="Assets\img\" />
-    <Folder Include="Assets\js\apps\people\edit\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvcTest.Database\MvcTest.Database.csproj">

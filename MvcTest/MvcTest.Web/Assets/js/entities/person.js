@@ -63,6 +63,6 @@
   });
 
   PeopleManager.reqres.setHandler("colour:entities", function (rawColours) {
-    return API.getColourEntities();
+    return API.getColourEntities(rawColours);
   });
 });

@@ -28,9 +28,10 @@
 
     submitClicked: function (e) {
       e.preventDefault();
-      var coloursView = this.regions.coloursListRegion.currentView;
-      var coloursCollection = this.coloursView.collection;
-      var data = this.Backbone.Syphon.serialize(this);
+      var region = this.getRegion("coloursListRegion");
+      var coloursView = region.currentView;
+      var coloursCollection = coloursView.collection;
+      var data = Backbone.Syphon.serialize(this);
       data.colours = coloursCollection.toJSON();
       this.trigger("form:submit", data);
     },
@@ -43,7 +44,7 @@
 
   });
 
-  Edit.ColourView = new Marionette.ItemView.extend({
+  Edit.ColourView =  Marionette.ItemView.extend({
     template: "#colour-template",
     events: {
       "click input": "colourClicked"
@@ -56,12 +57,12 @@
     }
   });
 
-  Edit.ColoursView = new Marionette.CollectionView.extend({
+  Edit.ColoursView =  Marionette.CollectionView.extend({
     childView: Edit.ColourView,
     tagName: "div"
   });
 
-  Edit.MissingPerson = new Marionette.ItemView.extend({
+  Edit.MissingPerson =  Marionette.ItemView.extend({
     template: "#missing-person-view"
   });
 });

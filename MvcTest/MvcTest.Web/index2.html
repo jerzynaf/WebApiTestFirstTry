@@ -32,7 +32,7 @@
     </script>
 
     <script type="text/template" id="colour-template">
-        <input type="checkbox"><%- isChecked === true? 'checked': ''%>> <%-name%>
+        <input type="checkbox"<%- isChecked === true? 'checked': ''%>> <%-name%>
     </script>
 
     <script type="text/template" id="people-list">
@@ -57,11 +57,11 @@
         <fieldset>
             <legend>User details</legend>
             <div class="form-group form-inline">
-                <input type="checkbox" id="isAuthorised" name="isAuthorised"><%-isAuthorised === true? 'checked':''%>/>
+                <input type="checkbox" id="isAuthorised" name="isAuthorised"<%-isAuthorised === true? 'checked':''%>/>
                 <label id="isAuthorisedLabel">Authorised</label>
             </div>
             <div class="form-group form-inline">
-                <input type="checkbox" id="isEnabled" name="isEnabled"><%-isEnabled === true? 'checked':''%>/>
+                <input type="checkbox" id="isEnabled" name="isEnabled"<%-isEnabled === true? 'checked':''%>/>
                 <label id="isEnabledLabel">Enabled</label>
             </div>
         </fieldset>
@@ -92,6 +92,8 @@
     <script src="Assets/js/apps/people/people_app.js"></script>
     <script src="Assets/js/apps/people/list/list_view.js"></script>
     <script src="Assets/js/apps/people/list/list_controller.js"></script>
+    <script src="Assets/js/apps/people/edit/edit_controller.js"></script>
+    <script src="Assets/js/apps/people/edit/edit_view.js"></script>
     <script type="text/javascript">
         PeopleManager.start();
     </script>

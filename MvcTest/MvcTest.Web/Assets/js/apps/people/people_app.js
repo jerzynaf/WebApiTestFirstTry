@@ -13,7 +13,7 @@
       PeopleApp.List.Controller.listPeople();
     },
     editPerson: function (id) {
-      //execute controller's action to edit person
+      PeopleApp.Edit.Controller.editPerson(id);
     }
   };
 
@@ -27,9 +27,9 @@
     API.editPerson(id);
   });
 
-  PeopleManager.addInitializer(function() {
+  PeopleManager.addInitializer(function () {
     new PeopleApp.Router({
       controller: API
-  });
+    });
   });
 });

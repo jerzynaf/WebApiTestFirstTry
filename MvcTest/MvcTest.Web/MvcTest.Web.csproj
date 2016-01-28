@@ -136,6 +136,7 @@
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="Assets\js\app.js" />
+    <Content Include="Assets\js\apps\people\edit\edit_controller.js" />
     <Content Include="Assets\js\apps\people\edit\edit_view.js" />
     <Content Include="Assets\js\apps\people\list\list_controller.js" />
     <Content Include="Assets\js\apps\people\list\list_view.js" />
